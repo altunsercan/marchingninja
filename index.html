@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Marching Ninja Games experiments with bold video games, procedural content generation, and iterative playtests—explore the evolving seeds of every new digital world."
+    />
+    <title>Marching Ninja Games</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cat: {
+                rosewater: "#f5e0dc",
+                flamingo: "#f2cdcd",
+                pink: "#f5c2e7",
+                mauve: "#cba6f7",
+                red: "#f38ba8",
+                maroon: "#eba0ac",
+                peach: "#fab387",
+                yellow: "#f9e2af",
+                green: "#a6e3a1",
+                teal: "#94e2d5",
+                sky: "#89b4fa",
+                sapphire: "#74c7ec",
+                blue: "#89b4fa",
+                lavender: "#b4befe",
+                text: "#cdd6f4",
+                subtext1: "#bac2de",
+                subtext0: "#a6adc8",
+                overlay0: "#1e1e2e",
+                surface0: "#313244",
+                surface1: "#45475a",
+                surface2: "#585b70",
+                mantle: "#1a1826",
+                crust: "#11111b"
+              }
+            },
+            fontFamily: {
+              mono: ["JetBrains Mono", "Fira Mono", "ui-monospace", "SFMono-Regular", "monospace"]
+            }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+
+      body {
+        min-height: 100vh;
+        background-color: #1e1e2e;
+      }
+
+      /* subtle scanlines for terminal vibes */
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size: 100% 24px;
+        pointer-events: none;
+        z-index: 0;
+        mix-blend-mode: screen;
+        opacity: 0.6;
+      }
+
+      .friend-hint {
+        color: #a6adc8; /* cat-subtext0 */
+        opacity: 0.7;
+      }
+
+      .friend-hint .ssh-token {
+        color: #74c7ec; /* cat-sapphire */
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body class="font-mono text-cat-text bg-cat-overlay0 text-left relative">
+    <main class="relative z-10 flex min-h-screen flex-col justify-center px-6 py-16 pb-32">
+      <section class="max-w-4xl">
+        <div class="space-y-6">
+          <blockquote class="rounded border-l-4 border-cat-sky/80 bg-cat-surface0/50 px-6 py-4 text-base italic text-cat-subtext0 shadow-lg shadow-cat-surface0/40">
+            All that exists is the seed of what will emerge from it.
+            <footer class="mt-3 text-xs font-normal uppercase tracking-[0.4em] text-cat-subtext1">Marcus Aurelius</footer>
+          </blockquote>
+          <p class="text-base font-light leading-relaxed text-cat-subtext1 sm:text-lg">
+            Here stands a quiet corner of the internet</br>
+            —no marketplace, no auction, no sale.
+          </p>
+          <p class="text-base font-light leading-relaxed text-cat-subtext1 sm:text-lg">
+            A little gateway for more to come.
+          </p>
+        </div>
+        <p class="mt-8 text-[0.65rem] uppercase tracking-[0.4em] font-light friend-hint">
+          If friend:
+          <span class="normal-case ssh-token font-light">ssh marching.ninja</span>
+        </p>
+      </section>
+    </main>
+
+    <div class="pointer-events-none absolute right-0 top-0 bottom-0 hidden lg:block">
+      <div
+        class="absolute right-10 top-16 h-48 w-48 rounded-full border border-cat-surface2/80 bg-cat-surface0/50 backdrop-blur"
+      ></div>
+      <div
+        class="absolute right-20 top-72 h-32 w-32 rounded-full border border-cat-surface1/70 bg-gradient-to-br from-cat-teal/40 to-cat-sky/60"
+      ></div>
+      <div
+        class="absolute right-0 bottom-20 h-72 w-7 rounded-l-full bg-gradient-to-b from-cat-mauve/60 via-cat-surface2/30 to-transparent"
+      ></div>
+    </div>
+
+    <footer
+      class="fixed bottom-0 left-0 right-0 z-20 border-t border-cat-surface2 bg-cat-overlay0 px-6 py-3 text-xs text-cat-subtext0 backdrop-blur backdrop-saturate-150"
+    >
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between">
+        <span>© 2025 Marching Ninja</span>
+        <span class="text-cat-subtext1">:)</span>
+      </div>
+    </footer>
+  </body>
+</html>
